@@ -10,7 +10,7 @@ namespace STOChernysh.Models
         public int CartId { get; set; }
         public string SessionKey { get; set; }
         public decimal Price { get; set; }
-        public virtual IEnumerable<Service> Services { get; set; }
+        public virtual IEnumerable<Service> Service { get; set; }
 
         public Cart(int CartId_, string SessionKey_, decimal Price_)
         {

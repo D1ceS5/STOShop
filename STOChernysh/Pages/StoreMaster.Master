@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StoreMaster.master.cs" Inherits="STOChernysh.Pages.StoreMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>MLGSTOShop</title>
+    <link href="../Content/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="categories">
+            <GS:CategoryLinks runat="server" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="bodyContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

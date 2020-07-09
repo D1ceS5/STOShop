@@ -12,7 +12,7 @@ namespace STOChernysh.Models
         public string Phone { get; set; }
         public string Adress { get; set; }
         public bool Status { get; set; }
-         public virtual IEnumerable<Cart> Carts { get; set; }
+         public virtual IEnumerable<Cart> Cart { get; set; }
 
 
          public Client()

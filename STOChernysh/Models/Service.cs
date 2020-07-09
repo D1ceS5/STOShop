@@ -13,11 +13,11 @@ namespace STOChernysh.Models
 
         public decimal Price { get; set; }
 
-        public virtual IEnumerable<Order> Orders { get; set; }
+        public virtual IEnumerable<Order> Order { get; set; }
 
-        public virtual IEnumerable<Category> Categories { get; set; }
-        public virtual IEnumerable<Master> Masters { get; set; }
-        public virtual IEnumerable<Car> Cars { get; set; }
+        public virtual IEnumerable<Category> Category{ get; set; }
+        public virtual IEnumerable<Master> Master { get; set; }
+        public virtual IEnumerable<Car> Car { get; set; }
 
 
         public Service(int ServiceId_, string Name_, string Description_)

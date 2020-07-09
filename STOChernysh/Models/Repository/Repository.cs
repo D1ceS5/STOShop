@@ -9,16 +9,16 @@ namespace STOChernysh.Models.Repository
     {
         EFDbContext context = new EFDbContext();
 
-        public IEnumerable<Car> Cars { get { return context.Car; } }
-        public IEnumerable<Cart> Carts { get { return context.Cart; } }
+        public List<Car> Car { get { return context.Car.ToList(); } }
+        public List<Cart> Cart { get { return context.Cart.ToList(); } }
 
-        public IEnumerable<Category> Categories { get { return context.Category; } }
-        public IEnumerable<Client> Clients { get { return context.Client; } }
-        public IEnumerable<Good> Goods { get { return context.Good; } }
-        public IEnumerable<Master> Masters { get { return context.Master; } }
+        public List<Category> Category { get { return context.Category.ToList(); } }
+        public List<Client> Client { get { return context.Client.ToList(); } }
+        public List<Good> Good { get { return context.Good.ToList(); } }
+        public List<Master> Master{ get { return context.Master.ToList(); } }
 
-        public IEnumerable<Order> Orders { get { return context.Order; } }
+        public List<Order> Order { get { return context.Order.ToList(); } }
 
-        public IEnumerable<Service> Services { get { return context.Service; } }
+        public List<Service> Service { get { return context.Service.ToList(); } }
     }
 }
