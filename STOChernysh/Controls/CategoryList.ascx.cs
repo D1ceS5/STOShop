@@ -26,7 +26,7 @@ namespace STOChernysh.Controls
         {
             string selectedCategory = (string)Page.RouteData.Values["category"] ?? Request.QueryString["category"];
             string path = RouteTable.Routes.GetVirtualPath(null, null, new RouteValueDictionary() { { "category", category }, { "page", "1" } }).VirtualPath;
-            return string.Format("<a href='{0}' {1}> {2} </a>", path, category == selectedCategory ? "class='selected'" : "", category);
+            return string.Format("<a href='{0}' {1}> {2} </a>", path, category == selectedCategory ? "class='selected'" : "class='category'", category);
         }
     }
 }

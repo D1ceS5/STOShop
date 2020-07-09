@@ -25,10 +25,13 @@ div#content {
 }
 
 div#categories {
-    float: left;
-    width: 8em;
+    width: 100%;
+    background-color: #444;
+    color: white;
+    display: inline-block;
     padding: .3em;
 }
+
 
 div.item {
     border-top: 1px dotted gray;
@@ -76,11 +79,13 @@ div.pager {
 
 div#categories a {
     font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial;
-    display: block;
+    display: inline-block;
+    color: white;
+    width: 8.5%;
+    height: 2em;
     text-decoration: none;
     padding: .6em;
-    color: Black;
-    border-bottom: 1px solid silver;
+    border-right: 1px solid silver;
 }
 
     div#categories a.selected {

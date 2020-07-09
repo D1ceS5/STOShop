@@ -49,8 +49,9 @@ namespace STOChernysh.Pages
             List<Service> service = repository.Service.ToList();
             string currentCategory = (string)RouteData.Values["category"] ??
                 Request.QueryString["category"];
+            int ctgid = currentCategory == null?-1: repository.Category.Where(c => c.Name == currentCategory).FirstOrDefault().CategoryId;
             return currentCategory == null ? service :
-                service.Where(p => p.Category.Where(c=>c.Name==currentCategory).ToList() != null).ToList();
+                service.Where(s=>s.Category.FirstOrDefault().CategoryId == ctgid).ToList();
         }
 
         public IEnumerable<STOChernysh.Models.Service> GetServices()
