@@ -9,6 +9,8 @@ namespace STOChernysh.Models
     {
         public int GoodId { get; set; }
         public string Name { get; set; }
+        
+        public decimal Price { get; set; }
 
         public Good(int GoodId_, string Name_)
         {

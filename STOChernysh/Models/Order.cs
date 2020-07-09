@@ -10,6 +10,8 @@ namespace STOChernysh.Models
         public int OrderId { get; set; }
         public int Good_Id { get; set; }
 
+        public decimal Price { get; set; }
+
         public Order(int OrderId_, int Good_Id_)
         {
             this.OrderId = OrderId_;

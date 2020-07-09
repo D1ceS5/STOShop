@@ -10,9 +10,15 @@ namespace STOChernysh.Models
         public int ServiceId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+
+        public decimal Price { get; set; }
+
+        public virtual IEnumerable<Order> Orders { get; set; }
+
         public virtual IEnumerable<Category> Categories { get; set; }
         public virtual IEnumerable<Master> Masters { get; set; }
         public virtual IEnumerable<Car> Cars { get; set; }
+
 
         public Service(int ServiceId_, string Name_, string Description_)
         {
