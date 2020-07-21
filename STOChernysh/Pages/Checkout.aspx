@@ -21,22 +21,12 @@
                 <label for="line1">Адресс 1:</label>
                 <SX:VInput Property="Line1" runat="server" />
             </div>
-            <div>
-                <label for="line2">Адресс 2:</label>
-                <SX:VInput Property="Line2" runat="server" />
-            </div>
-            <div>
-                <label for="line3">Адресс 3:</label>
-                <SX:VInput Property="Line3" runat="server" />
-            </div>
+           
             <div>
                 <label for="city">Город:</label>
                 <SX:VInput Property="City" runat="server" />
             </div>
 
-            <h3>Детали заказа</h3>
-            <input type="checkbox" id="giftWrap" name="giftWrap" value="true" />
-            Использовать подарочную упаковку?
         
         <p class="actionButtons">
             <button class="actionButtons" type="submit">Обработать заказ</button>

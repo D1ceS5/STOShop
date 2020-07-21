@@ -7,29 +7,29 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace STOChernysh.Pages
+namespace STOChernysh.Pages.Admin
 {
 
 
-    public partial class StoreMaster
+    public partial class Orders
     {
 
         /// <summary>
-        /// form1 элемент управления.
+        /// Repeater1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
 
         /// <summary>
-        /// bodyContent элемент управления.
+        /// showDispatched элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder bodyContent;
+        protected global::System.Web.UI.WebControls.CheckBox showDispatched;
     }
 }

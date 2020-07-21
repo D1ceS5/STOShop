@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
+         <GS:CartSummary runat="server"/>
         <div id="categories">
             <GS:CategoryLinks runat="server" />
         </div>

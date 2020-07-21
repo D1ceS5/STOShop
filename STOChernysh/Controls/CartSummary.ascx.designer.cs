@@ -7,29 +7,38 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace STOChernysh.Pages
+namespace STOChernysh.Controls
 {
 
 
-    public partial class StoreMaster
+    public partial class CartSummary
     {
 
         /// <summary>
-        /// form1 элемент управления.
+        /// csQuantity элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csQuantity;
 
         /// <summary>
-        /// bodyContent элемент управления.
+        /// csTotal элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder bodyContent;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csTotal;
+
+        /// <summary>
+        /// csLink элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor csLink;
     }
 }

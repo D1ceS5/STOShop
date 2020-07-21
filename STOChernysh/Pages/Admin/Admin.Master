@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="STOChernysh.Pages.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ADMIN</title>
+   <link rel="stylesheet" href="../../Content/Admin.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>GameStore: админ панель</h1>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div id="nav">
+        <a href="<%= OrdersUrl %>">Управление заказами</a>
+        <a href="<%= GamesUrl %>">Управление каталогом</a>
+    </div>
+</body>
+</html>
