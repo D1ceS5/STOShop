@@ -15,7 +15,7 @@ namespace STOChernysh.Models
 
         public virtual IEnumerable<Order> Order { get; set; }
 
-        public virtual IEnumerable<Category> Category{ get; set; }
+        public int Categories_CategoryId{ get; set; }
         public virtual IEnumerable<Master> Master { get; set; }
         public virtual IEnumerable<Car> Car { get; set; }
 

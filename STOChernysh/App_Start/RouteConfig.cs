@@ -10,6 +10,10 @@ namespace STOChernysh
             routes.MapPageRoute(null, "main", "~/Pages/Default.aspx");
             routes.MapPageRoute(null, "main/{page}", "~/Pages/Default.aspx");
             routes.MapPageRoute(null, "main/{category}/{page}", "~/Pages/Default.aspx");
+
+            routes.MapPageRoute("cart", "cart", "~/Pages/CartView.aspx");
+
+            routes.MapPageRoute("checkout", "checkout", "~/Pages/Checkout.aspx");
         }
     }
 }

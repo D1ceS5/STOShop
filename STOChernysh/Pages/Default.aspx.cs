@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Routing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -41,17 +42,34 @@ namespace STOChernysh.Pages
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            int selectedServId;
+            if (int.TryParse(Request.Form["add"], out selectedServId))
+            {
+                Service selectedGame = repository.Service.Where(g => g.ServiceId == selectedServId).FirstOrDefault();
+                if (selectedGame != null)
+                {
+                    SessionHelper.GetCart(Session).AddItem(selectedGame, 1);
+                    SessionHelper.Set(Session, SessionKey.RETURN_URL, Request.RawUrl);
 
+                    Response.Redirect(RouteTable.Routes.GetVirtualPath(null, "cart", null).VirtualPath);
+                }
+            }
         }
 
-        private List<Service> FilterService()
+        private IEnumerable<Service> FilterService()
         {
-            List<Service> service = repository.Service.ToList();
-            string currentCategory = (string)RouteData.Values["category"] ??
-                Request.QueryString["category"];
+            IEnumerable<Service> service = repository.Service;
+            
+            string currentCategory = (string)RouteData.Values["category"] ?? Request.QueryString["category"];
             int ctgid = currentCategory == null?-1: repository.Category.Where(c => c.Name == currentCategory).FirstOrDefault().CategoryId;
-            return currentCategory == null ? service :
-                service.Where(s=>s.Category.FirstOrDefault().CategoryId == ctgid).ToList();
+
+            if (currentCategory != null)
+            {
+                Category category = repository.Category.Where(c => c.CategoryId == ctgid).FirstOrDefault();
+                IEnumerable<Service> serviceFiltred = service.Where(ct=>ct.Categories_CategoryId == ctgid);
+                return serviceFiltred;
+            }
+            return service;
         }
 
         public IEnumerable<STOChernysh.Models.Service> GetServices()
