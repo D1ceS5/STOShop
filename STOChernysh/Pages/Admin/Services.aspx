@@ -67,12 +67,14 @@
                     <input name="description" />
                 </td>
                 <td>
-                    <input name="category" />
+                    <input name="categories_categoryId" />
                 </td>
                 <td>
                     <input name="price" />
                 </td>
+                
                 <td>
+
                     <asp:Button ID="Button5" CommandName="Insert" Text="Вставить" runat="server" />
                 </td>
             </tr>

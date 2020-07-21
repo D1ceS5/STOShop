@@ -96,6 +96,7 @@
     <Content Include="Controls\CartSummary.ascx" />
     <Content Include="Controls\CategoryList.ascx" />
     <Content Include="Global.asax" />
+    <Content Include="Pages\Admin\Login.aspx" />
     <Content Include="Pages\Admin\Orders.aspx" />
     <Content Include="Pages\Admin\Services.aspx" />
     <Content Include="Pages\CartView.aspx" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="Pages\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
