@@ -33,6 +33,15 @@ namespace STOChernysh.Pages
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
 
         /// <summary>
+        /// mail элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText mail;
+
+        /// <summary>
         /// checkoutMessage элемент управления.
         /// </summary>
         /// <remarks>

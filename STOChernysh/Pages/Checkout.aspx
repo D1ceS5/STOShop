@@ -27,7 +27,10 @@
                 <SX:VInput Property="City" runat="server" />
             </div>
 
-        
+             <div>
+                <label for="mail">E-Mail:</label>
+                <input type="text" id="mail" name="mail" runat="server" />
+            </div>
         <p class="actionButtons">
             <button class="actionButtons" type="submit">Обработать заказ</button>
         </p>

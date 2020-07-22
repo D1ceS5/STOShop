@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="bodyContent" runat="server">
     <div id="content">
         <h2>Ваша корзина</h2>
-        <table id="cartTable">
+        <div id="con" runat="server" >
+        <table id="cartTable"  >
             <thead>
                 <tr>
         
@@ -35,6 +36,7 @@
                     <td><%= CartTotal.ToString("c") %></td>
                 </tr>
             </tfoot>
+            </div>
         </table>
         <p class="actionButtons">
             <a href="<%= ReturnUrl %>">Продолжить покупки</a>

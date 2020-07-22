@@ -37,6 +37,6 @@ namespace STOChernysh.Pages
         public decimal CartTotal { get { return SessionHelper.GetCart(Session).ComputeTotalPrice(); } }
 
         public string ReturnUrl { get { return SessionHelper.Get<string>(Session, SessionKey.RETURN_URL); } }
-        public string CheckoutUrl { get { return RouteTable.Routes.GetVirtualPath(null, "checkout", null).VirtualPath; } }
+        public string CheckoutUrl { get {  return RouteTable.Routes.GetVirtualPath(null, "checkout", null).VirtualPath;  } }
     }
 }

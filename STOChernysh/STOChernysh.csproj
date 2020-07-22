@@ -223,6 +223,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Helpers\MasterHelper.cs" />
+    <Compile Include="Pages\Helpers\OrderHelper.cs" />
     <Compile Include="Pages\Helpers\SessionHelper.cs" />
     <Compile Include="Pages\StoreMaster.Master.cs">
       <DependentUpon>StoreMaster.Master</DependentUpon>

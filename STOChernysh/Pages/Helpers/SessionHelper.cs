@@ -7,7 +7,7 @@ using System.Web.SessionState;
 
 namespace STOChernysh
 {
-    
+   
     public enum SessionKey
     {
         CART,
@@ -15,6 +15,7 @@ namespace STOChernysh
     }
     public static class SessionHelper
     {
+        public static string html { get; set; }
         public static void Set(HttpSessionState session, SessionKey key, object value)
         {
             session[Enum.GetName(typeof(SessionKey), key)] = value;
