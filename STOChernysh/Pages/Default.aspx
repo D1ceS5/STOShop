@@ -2,6 +2,8 @@
 
 <asp:Content ContentPlaceHolderID="bodyContent" runat="server" > 
     <div id="content">
+        <div class="item">
+                 <% Response.Write(GetBanner()); %>
         <asp:Repeater ItemType="STOChernysh.Models.Service"  SelectMethod="GetServices" runat="server" >
             <ItemTemplate>
                 <div class="item">

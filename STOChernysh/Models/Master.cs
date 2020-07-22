@@ -9,7 +9,7 @@ namespace STOChernysh.Models
     {
         public int MasterId { get; set; }
         public string Name { get; set; }
-
+        public int User_UerId { get; set; }
         public Master(int MasterId_, string Name_)
         {
             this.MasterId = MasterId_;

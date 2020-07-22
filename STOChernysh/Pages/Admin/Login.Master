@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="STOChernysh.Pages.Admin.Login1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>ADMIN</title>
+   <link rel="stylesheet" href="../../Content/Admin.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>STOShop</h1>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

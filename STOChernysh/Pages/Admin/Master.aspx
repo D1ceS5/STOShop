@@ -1,4 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="STOChernysh.Pages.Admin.Orders" MasterPageFile="~/Pages/Admin/Admin.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Master.aspx.cs" Inherits="STOChernysh.Pages.Admin.Master" MasterPageFile="~/Pages/Admin/Master.Master" %>
+
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <% GetMasterName(); %>
+</asp:Content>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="outerContainer">
@@ -13,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <asp:Repeater ID="Repeater1" runat="server" SelectMethod="GetOrders" ItemType="STOChernysh.Models.Order" >
+                <asp:Repeater ID="Repeater1" runat="server" SelectMethod="GetOrders" ItemType="STOChernysh.Models.Order" EnableViewState="false" >
                     <ItemTemplate>
                         <tr>
                             <td><%#: Item.Name %></td>
@@ -23,11 +28,11 @@
                             <td>
                                 <asp:PlaceHolder ID ="PlaceHolder1" Visible="<%# !Item.Dispatched %>" runat="server">
                                     <button type="submit" name="dispatch" value="<%# Item.OrderId %>">
-                                        Обработать
+                                        Готово
                                     </button>
                                 </asp:PlaceHolder>
                             </td>
-                            <td><%# GetMasterName(Item.Masters_MasterId) %></td>
+                           
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>

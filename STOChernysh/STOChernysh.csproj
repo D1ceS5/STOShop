@@ -97,12 +97,15 @@
     <Content Include="Controls\CategoryList.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Pages\Admin\Login.aspx" />
+    <Content Include="Pages\Admin\Master.aspx" />
     <Content Include="Pages\Admin\Orders.aspx" />
     <Content Include="Pages\Admin\Services.aspx" />
     <Content Include="Pages\CartView.aspx" />
     <Content Include="Pages\Checkout.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Admin\Admin.Master" />
+    <Content Include="Pages\Admin\Master.Master" />
+    <Content Include="Pages\Admin\Login.Master" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -134,17 +137,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountType.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Crt.cs" />
     <Compile Include="Models\Good.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Master.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Password.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
     <Compile Include="Models\Repository\Repository.cs" />
     <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Pages\Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -158,6 +165,27 @@
     </Compile>
     <Compile Include="Pages\Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Master.aspx.cs">
+      <DependentUpon>Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Master.aspx.designer.cs">
+      <DependentUpon>Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\Orders.aspx.cs">
       <DependentUpon>Orders.aspx</DependentUpon>
@@ -194,6 +222,7 @@
     <Compile Include="Pages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Helpers\MasterHelper.cs" />
     <Compile Include="Pages\Helpers\SessionHelper.cs" />
     <Compile Include="Pages\StoreMaster.Master.cs">
       <DependentUpon>StoreMaster.Master</DependentUpon>

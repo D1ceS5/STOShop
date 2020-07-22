@@ -22,7 +22,41 @@ namespace STOChernysh.Models.Repository
 
         public List<Service> Service { get { return context.Service.ToList(); } }
 
+        public List<OrderLine> OrderLine { get { return context.OrderLine.ToList(); } }
 
+        public List<Login> Logins { get { return context.Login.ToList(); } }
+
+        public List<Password> Passwords { get { return context.Password.ToList(); } }
+
+        public List<AccountType> AccountTypes { get { return context.AccountType.ToList(); } }
+
+        public List<User> Users { get { return context.User.ToList(); } }
+
+        public void AddPassword(Password password)
+        {
+            context.Password.Add(password); context.SaveChanges();
+        }
+
+        public void AddLogin(Login password)
+        {
+            context.Login.Add(password);
+            context.SaveChanges();
+        }
+
+        public void AddUser(User password)
+        {
+            context.User.Add(password);
+            context.SaveChanges();
+        }
+        public void DeleteOrder(Order order)
+        {
+            foreach(var item in context.OrderLine.Where(ol=>ol.Order.OrderId == order.OrderId))
+            {
+                context.OrderLine.Remove(item);
+            }
+            context.Order.Remove(order);
+            context.SaveChanges();
+        }
         public void SaveOrder(Order order)
         {
             if (order.OrderId == 0)

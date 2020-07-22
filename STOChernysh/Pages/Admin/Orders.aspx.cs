@@ -47,6 +47,10 @@ namespace STOChernysh.Pages.Admin
             }
             return total;
         }
+        public string GetMasterName(int id)
+        {
+            return repository.Master.Where(m=>m.MasterId==id).FirstOrDefault().Name;
+        }
 
     }
 }

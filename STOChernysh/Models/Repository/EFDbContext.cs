@@ -12,6 +12,10 @@ namespace STOChernysh.Models.Repository
         public DbSet<Order> Order { get; set; }
         public DbSet<Master> Master { get; set; }
         public DbSet<Good> Good { get; set; }
-
+        public DbSet<Login> Login { get; set; }
+        public DbSet<Password> Password { get; set; }
+        public DbSet<AccountType> AccountType { get; set; }
+        public DbSet<User> User{ get; set; }
+        public DbSet<OrderLine> OrderLine { get; set; }
     }
 }

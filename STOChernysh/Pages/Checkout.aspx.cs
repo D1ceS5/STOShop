@@ -16,14 +16,15 @@ namespace STOChernysh.Pages
         {
             checkoutForm.Visible = true;
             checkoutMessage.Visible = false;
-
+            Repository repository = new Repository();
             if (IsPostBack)
             {
                 Order order = new Order();
+                
                 if (TryUpdateModel(order, new FormValueProvider(ModelBindingExecutionContext)))
                 {
                     order.OrderLines = new List<OrderLine>();
-
+                    order.Masters_MasterId = repository.Master[new Random().Next(0, repository.Master.Count)].MasterId;
                     Crt cart = SessionHelper.GetCart(Session);
 
                     foreach (CrtLine line in cart.Lines)

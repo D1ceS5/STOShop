@@ -3,6 +3,7 @@ using STOChernysh.Models.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Routing;
 using System.Web.UI;
@@ -39,6 +40,17 @@ namespace STOChernysh.Pages
                 page = GetPageFromRequest();
                 return page > MaxPage ? MaxPage : page;
             }
+        }
+        protected string GetBanner()
+        {
+            Dictionary<int, int> keys = new Dictionary<int, int>();
+            foreach(int id in repository.Service.Select(s => s.ServiceId))
+            {
+                keys.Add(id, repository.OrderLine.Where(ol => ol.Service.ServiceId == id).Sum(q => q.Quantity));
+            }
+            Service popular = repository.Service.Where(s => s.ServiceId == keys.OrderByDescending(k => k.Value).FirstOrDefault().Key).FirstOrDefault();
+            return String.Format("<div class='itempop'> <h3>{0}</h3>{1}<h4>{2}</h4> <button name='add' type='submit' value='{3}' > В корзину  </button> </div>",popular.Name,popular.Description,popular.Price.ToString("c"),popular.ServiceId);
+            
         }
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -18,6 +18,7 @@ namespace STOChernysh
 
             routes.MapPageRoute("admin_orders", "admin/orders", "~/Pages/Admin/Orders.aspx");
             routes.MapPageRoute("admin_services", "admin/services", "~/Pages/Admin/Services.aspx");
+            routes.MapPageRoute("master", "master", "~/Pages/Admin/Master.aspx");
         }
     }
 }

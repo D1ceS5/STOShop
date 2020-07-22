@@ -38,6 +38,12 @@ div.item {
     padding-top: .7em;
     margin-bottom: .7em;
 }
+div.itempop {
+    background-color: yellow;
+    border-top: 1px dotted orange;
+    padding-top: .7em;
+    margin-bottom: .7em;
+}
 
     div.item:first-child {
         border-top: none;

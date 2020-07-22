@@ -18,6 +18,7 @@ namespace STOChernysh.Models
         public string City { get; set; }
         public decimal Price { get; set; }
         public bool Dispatched { get; set; }
+        public int Masters_MasterId { get; set; }
         public virtual List<OrderLine> OrderLines { get; set; }
     }
     public class OrderLine
